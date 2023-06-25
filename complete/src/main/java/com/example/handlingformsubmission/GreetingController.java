@@ -15,6 +15,12 @@ public class GreetingController {
 		return "greeting";
 	}
 
+	@GetMapping("/hello")
+	public String sayHello(Model model){
+		//htmlのファイル名をstringで返すとそれが表示される？
+		return "hello";
+	}
+
 	@PostMapping("/greeting")
 	public String greetingSubmit(@ModelAttribute Greeting greeting, Model model) {
 		model.addAttribute("greeting", greeting);
