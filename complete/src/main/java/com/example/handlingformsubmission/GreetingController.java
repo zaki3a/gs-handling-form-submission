@@ -23,7 +23,8 @@ public class GreetingController {
 
 	@PostMapping("/greeting")
 	public String greetingSubmit(@ModelAttribute Greeting greeting, Model model) {
-		model.addAttribute("greeting", greeting);
+		//model(htmlページ)に渡すオブジェクトとその名前
+		model.addAttribute("greetingData", greeting);
 		return "result";
 	}
 
